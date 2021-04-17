@@ -83,11 +83,3 @@ RUN chmod +x ./node_modules
 EXPOSE 5000
 
 CMD [ "npx", "serve", "./dist/ng-template/"]
-
-# https://developer.okta.com/blog/2020/06/24/heroku-docker-react
-# Heroku setup notes
-# heroku container:login
-# git remote add heroku https://git.heroku.com/<your-app-name>.git
-# heroku container:push web --remote heroku
-# heroku container:release web --remote heroku
-# heroku open --remote heroku
