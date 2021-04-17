@@ -1,0 +1,6 @@
+{
+    "name": "ng-template",
+    "description": "Angular Docker/Heroku Tempalte",
+    "repository": "https://github.com/woody34/ng-template",
+    "stack": "container"
+}
