@@ -15,9 +15,11 @@
     "docker:logs": "docker logs ng-template",
     "docker:stop": "docker stop ng-template",
     "docker:rm": "docker rm ng-template",
+    "docker:deploy": "npm run docker:build && npm run docker:create && npm run docker",
+    "heroku:setup": "heroku stack:set container",
     "heroku:build": "heroku container:login && heroku container:push web --remote heroku",
     "heroku:release": "heroku container:release web --remote heroku",
-    "heroku:deploy": "npm run heroku:build && npm run heroku:release && npm run heroku:release",
+    "heroku:deploy": "npm run heroku:build && npm run heroku:release && npm run heroku:open",
     "heroku:open": "heroku open --remote heroku"
   },
   "private": true,
