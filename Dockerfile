@@ -60,7 +60,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
     && npm --version
 
 # Create app directory
-WORKDIR /usr/src/blocks
+WORKDIR /usr/src/ng-template
 
 # If you are building your code for production
 # RUN npm ci --only=production
