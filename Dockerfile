@@ -76,13 +76,13 @@ RUN cp -r ./tmp/dist/ ./dist
 
 RUN rm -rf ./tmp/
 
-RUN npm i http-server
+RUN npm i serve
 
 RUN chmod +x ./node_modules
 
 EXPOSE 5000
 
-CMD [ "npx", "http-server", "-p 5000", "./dist/ng-template", "--", "index.html"]
+CMD [ "npx", "serve", "./dist/ng-template/"]
 
 # https://developer.okta.com/blog/2020/06/24/heroku-docker-react
 # Heroku setup notes
