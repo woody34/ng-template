@@ -39,15 +39,18 @@ jobs:
             ${{ runner.os }}-${{ matrix.node-version }}-nodemodules2-
 
       ## Dependencies
-      - name: Install Dependencies
+      - name: Install dependencies
         if: |
           steps.cache-npm-cache.outputs.cache-hit != 'true' ||
           steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
+      # Build
+      - name: Build service
+        run: npm run build:ci
 
-      ## Test
-      - name: Start service
-        run: npm run start
+      # Test
+      - name: Run unit tests
+        run: npm run test:ci
 
-      - name: Run tests
-        run: npm t
+      # - name: Run e2e tests
+      #   run: npm run e2e
